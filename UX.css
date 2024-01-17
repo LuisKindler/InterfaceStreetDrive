@@ -21,6 +21,7 @@ video {
     left: 0;
 }
 
+/*Start Button Design*/
 .start-button-container {
     position: absolute;
     top: 50%;
@@ -43,6 +44,8 @@ video {
 .start-button:hover {
     background: rgb(148, 75, 220);
 }
+
+
 
 /*Navgation Bar Unten (Roter, Gelber, Grüner Pfeil) */
 .navigation-bar-bottom {
@@ -70,6 +73,8 @@ video {
     transition: background 0.3s ease;
 }
 
+
+
 /*Navgation Bar  (Blauer Pfeil) */
 .navigation-bar-upper {
     
@@ -91,6 +96,8 @@ video {
     text-decoration: none;
     transition: background 0.3s ease;
 }
+
+
 
 /*Button Design Einzeln*/
 #leftArrowBtn {
