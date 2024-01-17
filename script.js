@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
             video.play();
             isPaused = false;
             // Aktualisiere das Symbol des Stop-Buttons auf "Pause"
-            stopBtn.innerHTML = "▐▐";
+            document.getElementById("stopBtn").innerHTML = '<img src="Bilder/pause-alt-svgrepo-com.svg" alt="Pause">';
         }
     }
 

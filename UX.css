@@ -8,7 +8,7 @@ html, body {
 }
 
 .center-container {
-    height: calc(100% - 40px); /* Berücksichtige die Höhe der Navigationsleiste */
+    height: calc(100% - 120px); /* Berücksichtige die Höhe der Navigationsleiste */
     position: relative;
 }
 
@@ -42,17 +42,15 @@ video {
 }
 
 .start-button:hover {
-    background: rgb(148, 75, 220);
+    background: rgb(144, 144, 144);
 }
-
 
 
 /*Navgation Bar Unten (Roter, Gelber, Grüner Pfeil) */
 .navigation-bar-bottom {
     position: absolute;
     bottom: 0;
-    left: 41%;
-    transform: translateX(-50%);
+    margin-left: 40%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end; /* Buttons am unteren Rand ausrichten */
@@ -77,24 +75,31 @@ video {
 
 /*Navgation Bar  (Blauer Pfeil) */
 .navigation-bar-upper {
-    
-    margin-left: 1000px;
-    margin-bottom: 200px;
-    transform: translate(-50%);
-    width: 100%;
-    max-width: 500px;
-    z-index: 1;
+    margin-bottom: 100px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 47%;
+    align-items:center;
+    width: 80%;
+    max-width: 50px;
+    z-index: 10;
 }
 
 .navigation-bar-upper .button {
     background: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
-    font-size: 20px;
-    padding: 10px 20px;
+    font-size: 50px;
+    padding: 10px 30px;
     border-radius: 50px;
     text-decoration: none;
     transition: background 0.3s ease;
+}
+
+/*Stop Button Design*/
+.navigation-bar-bottom #stopBtn img {
+    width: 24px; /* Passe die Breite nach Bedarf an */
+    height: 24px; /* Passe die Höhe nach Bedarf an */
 }
 
 
