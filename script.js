@@ -32,8 +32,8 @@ document.addEventListener('DOMContentLoaded', function () {
         "GoethesraßeVonSchillerstraße": "Videos/Goethestraße/Goethestraße_von_Schillerstraße.mov",
     };
 
-        // Überprüfen Sie, ob alle Video-Elemente gefunden werden können
-        Object.values(videoPaths).forEach(function (videoPath) {
+    // Überprüfen Sie, ob alle Video-Elemente gefunden werden können
+    Object.values(videoPaths).forEach(function (videoPath) {
             var videoElement = document.createElement('video');
             videoElement.src = videoPath;
     
@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.error("Error loading video:", videoPath);
             });
         });
+        
 
     // Variable, um den aktuellen Videopfad zu verfolgen
     var currentVideo = videoPaths["Start"];

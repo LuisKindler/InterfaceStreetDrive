@@ -44,6 +44,7 @@ video {
     background: rgb(148, 75, 220);
 }
 
+/*Navgation Bar Unten (Roter, Gelber, Grüner Pfeil) */
 .navigation-bar-bottom {
     position: absolute;
     bottom: 0;
@@ -57,13 +58,6 @@ video {
     z-index: 1;
 }
 
-.navigation-bar-upper {
-    position: absolute;
-    transform: translate(-50%);
-    width: 80%;
-    max-width: 50px;
-    z-index: 1;
-}
 
 .navigation-bar-bottom .button {
     background: rgb(255, 255, 255);
@@ -74,6 +68,17 @@ video {
     border-radius: 50px;
     text-decoration: none;
     transition: background 0.3s ease;
+}
+
+/*Navgation Bar  (Blauer Pfeil) */
+.navigation-bar-upper {
+    
+    margin-left: 1000px;
+    margin-bottom: 200px;
+    transform: translate(-50%);
+    width: 100%;
+    max-width: 500px;
+    z-index: 1;
 }
 
 .navigation-bar-upper .button {
@@ -87,6 +92,7 @@ video {
     transition: background 0.3s ease;
 }
 
+/*Button Design Einzeln*/
 #leftArrowBtn {
     align-self: flex-end; /* Unten ausrichten */
     margin-right: 10px;
