@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var videoPaths = {
         "WendenVonBahnhofstraße": "Videos/Extra/Wenden_Bahnhof.mov",
-        "Start": "Videos/Extra/Start4.mp4",
+        "Start": "Videos/Extra/Start4_1.mp4",
         "BaumanstraßeVonBahnhofstraße": "Videos/Baumanstraße/Baumanstraße Von Bahnhofstraße 2.mp4",
         "BaumanstraßeVonSchillerstraße": "Videos/Baumanstraße/Baumanstraße_von_Schillerstraße.mov",
         "BaumanstraßeVonStart": "Videos/Baumanstraße/Baumanstraße_von_Start.mov",

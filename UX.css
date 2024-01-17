@@ -44,26 +44,45 @@ video {
     background: rgb(148, 75, 220);
 }
 
-.navigation-bar {
+.navigation-bar-bottom {
     position: absolute;
     bottom: 0;
-    left: 50%;
+    left: 41%;
     transform: translateX(-50%);
     display: flex;
     justify-content: space-between;
     align-items: flex-end; /* Buttons am unteren Rand ausrichten */
     width: 80%;
-    max-width: 300px;
+    max-width: 50px;
     z-index: 1;
 }
 
-.navigation-bar .button {
+.navigation-bar-upper {
+    position: absolute;
+    transform: translate(-50%);
+    width: 80%;
+    max-width: 50px;
+    z-index: 1;
+}
+
+.navigation-bar-bottom .button {
     background: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
-    font-size: 250px;
+    font-size: 50px;
     padding: 10px 20px;
-    border-radius: 75px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.navigation-bar-upper .button {
+    background: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 50px;
     text-decoration: none;
     transition: background 0.3s ease;
 }
@@ -92,7 +111,11 @@ video {
     color: #008a05;
 }
 
-.navigation-bar .button:hover {
+.navigation-bar-bottom .button:hover {
+    background: rgb(144, 144, 144);
+}
+
+.navigation-bar-upper .button:hover {
     background: rgb(144, 144, 144);
 }
 
@@ -101,29 +124,3 @@ video {
 }
 
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.flexreihe-unten,
-.flexreihe-oben {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px; /* Füge Padding hinzu, um Platz um die Buttons zu schaffen */
-}
-
-.button {
-    background: rgb(49, 30, 97);
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.button:hover {
-    background: rgb(148, 75, 220);
-}
