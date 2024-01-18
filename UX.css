@@ -25,8 +25,9 @@ video {
     position: absolute;
     top: 50%;
     left: 50%;
+    bottom: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2; /* Erhöhe den Z-Index, wenn nötig */
+    z-index: 3; /* Erhöhe den Z-Index, wenn nötig */
 }
 
 .start-button {
@@ -39,6 +40,7 @@ video {
 .start-button img {
     width: 250px; /* Ändere die Breite nach Bedarf */
     height: auto; /* Behält das Seitenverhältnis des Bildes bei */
+    background: transparent;
 }
 
 .start-button:hover {
