@@ -12,24 +12,27 @@ document.addEventListener('DOMContentLoaded', function () {
     var rightArrowBtn = document.getElementById("rightArrowBtn");
 
     var videoPaths = {
-        "WendenVonBahnhofstraße": "Videos/Extra/Wenden_Bahnhof.mov",
-        "Start": "Videos/Extra/Start4_1.mp4",
-        "BaumanstraßeVonBahnhofstraße": "Videos/Baumanstraße/Baumanstraße Von Bahnhofstraße 2.mp4",
-        "BaumanstraßeVonSchillerstraße": "Videos/Baumanstraße/Baumanstraße_von_Schillerstraße.mov",
-        "BaumanstraßeVonStart": "Videos/Baumanstraße/Baumanstraße_von_Start.mov",
-        "BaumanstraßeVonWenden": "Videos/Baumanstraße/Baumanstraße_von_Wenden.mov",
-        "BaumanstraßeExtra1": "Videos/Extra/Baumanstraße_Extra_1.mov",
-        "BaumanstraßeExtra2": "Videos/Extra/Baumanstraße_Extra_2.mov",
-        "BaumanstraßeExtra3": "Videos/Extra/Baumanstraße_Extra_3.mov",
-        "BaumanstraßeExtra4": "Videos/Extra/Baumanstraße_Extra_4.mov",
-        "BahnhofstraßeVonBaumanstraße": "Videos/Bahnhofstraße/Bahnhofstraße_von_Baumanstraße.mov",
-        "BahnhofstraßeVonGoethestraße": "Videos/Bahnhofstraße/Bahnhofstraße_von_Goethestraße.mov",
-        "BahnhofstraßeVonStart": "Videos/Bahnhofstraße/Bahnhofstraße_von_Start.mov",
-        "BahnhofstraßeVonWenden": "Videos/Bahnhofstraße/Bahnhofstraße_von_Wenden.mov",
-        "SchillerstraßeVonBaumannstraße": "Videos/Schillerstraße/Schillerstraße_von_Baumannstraße.mov",
-        "SchillerstraßeVonGoethestraße": "Videos/Schillerstraße/Schillerstraße_von_Goethestraße.mov",
-        "GoethesraßeVonBahnhofstraße": "Videos/Goethestraße/Goethestraße_von_Bahnhofstraße.mov",
-        "GoethesraßeVonSchillerstraße": "Videos/Goethestraße/Goethestraße_von_Schillerstraße.mov",
+        "WendenVonBahnhofstraße": "VideosFinal/Extra/Wenden_von_Bahnhofstraße.mp4",
+        "WendenVonBaumanstraße": "VideosFinal/Extra/Wenden_von_Baumanstraße.mp4",
+        "WendenVonStart": "VideosFinal/Extra/Wenden_von_Start.mp4",
+        "Start": "VideosFinal/Extra/Start.mp4",
+        "BaumanstraßeVonBahnhofstraße": "VideosFinal/Baumanstraße/Baumanstraße_von_Bahnhofstraße.mp4",
+        "BaumanstraßeVonSchillerstraße": "VideosFinal/Baumanstraße/Baumanstraße_von_Schillerstraße.mp4",
+        "BaumanstraßeVonStart": "VideosFinal/Baumanstraße/Baumanstraße_von_Start.mp4",
+        "BaumanstraßeVonWenden": "VideosFinal/Baumanstraße/Baumanstraße_von_Wenden.mp4",
+        "BaumanstraßeExtra1Schiller": "VideosFinal/Extra/Baumanstraße_Extra_von_Schillerstraße.mp4",
+        "BaumanstraßeExtra1": "VideosFinal/Extra/Baumanstraße_Extra1_von_Baumanstraße.mp4",
+        "BaumanstraßeExtra2": "VideosFinal/Extra/Baumanstraße_Extra2.mp4",
+        "BaumanstraßeExtra3": "VideosFinal/Extra/Baumanstraße_Extra3.mp4",
+        "BaumanstraßeExtra4": "VideosFinal/Extra/Baumanstraße_Extra4.mp4",
+        "BahnhofstraßeVonBaumanstraße": "VideosFinal/Bahnhofstraße/Bahnhofstraße_von_Baumanstraße.mp4",
+        "BahnhofstraßeVonGoethestraße": "VideosFinal/Bahnhofstraße/Bahnhofstraße_von_Goethestraße.mp4",
+        "BahnhofstraßeVonStart": "VideosFinal/Bahnhofstraße/Bahnhofstraße_von_Start.mp4",
+        "BahnhofstraßeVonWenden": "VideosFinal/Bahnhofstraße/Bahnhofstraße_von_Wenden.mp4",
+        "SchillerstraßeVonBaumannstraße": "VideosFinal/Schillerstraße/Schillerstraße_von_Baumanstraße.mp4",
+        "SchillerstraßeVonGoethestraße": "VideosFinal/Schillerstraße/Schillerstraße_von_Goethestraße.mp4",
+        "GoethesraßeVonBahnhofstraße": "VideosFinal/Goethestraße/Goethestraße_von_Bahnhofstaße.mp4",
+        "GoethesraßeVonSchillerstraße": "VideosFinal/Goethestraße/Goethestraße_von_Schillerstraße.mp4",
     };
 
     // Überprüfen Sie, ob alle Video-Elemente gefunden werden können
@@ -121,14 +124,20 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (video.ended && currentVideo === videoPaths["WendenVonBahnhofstraße"]) {
             console.log("Changing video to BahnhofstraßeVonWenden")
             changeVideo(videoPaths["BahnhofstraßeVonWenden"])
-
-            //Hier brauche ich noch: WendenvonStart, Wenden von Baumanstraße
+        
+        } else if (video.ended && currentVideo === videoPaths["WendenVonStart"]) {
+            console.log("Changing video to BahnhofstraßeVonWenden")
+            changeVideo(videoPaths["BahnhofstraßeVonWenden"])
             
         } else if (video.ended && currentVideo === videoPaths["BaumanstraßeExtra4"]) {
             console.log("Changing video to BahnhofstraßeVonWenden")
             changeVideo(videoPaths["BahnhofstraßeVonWenden"])
 
         } else if (video.ended && currentVideo === videoPaths["BaumanstraßeVonStart"]) {
+            console.log("Changing video to BaumanstraßeExtra1")
+            changeVideo(videoPaths["BaumanstraßeExtra1"])
+
+        } else if (video.ended && currentVideo === videoPaths["BaumanstraßeVonWenden"]) {
             console.log("Changing video to BaumanstraßeExtra1")
             changeVideo(videoPaths["BaumanstraßeExtra1"])
         }
@@ -160,24 +169,35 @@ document.addEventListener('DOMContentLoaded', function () {
 
             //Das ist noch falsch, eigentlich muss da WendenVonBaumanstraße, Vergessen
         } else if (video.ended && currentVideo === videoPaths["BaumanstraßeVonSchillerstraße"]) {
-            console.log("Changing video to WendenVonBahnhofstraße")
-            changeVideo(videoPaths["WendenVonBahnhofstraße"])
+            console.log("Changing video to WendenVonBaumanstraße")
+            changeVideo(videoPaths["WendenVonBaumanstraße"])
+
+        } else if (video.ended && currentVideo === videoPaths["SchillerstraßeVonGoethestraße"]) {
+            console.log("Changing video to BaumanstraßeExtra1Schiller")
+            changeVideo(videoPaths["BaumanstraßeExtra1Schiller"])
+
+        } else if (video.ended && currentVideo === videoPaths["BaumanstraßeVonWenden"]) {
+            console.log("Changing video to SchillerstraßeVonBaumannstraße")
+            changeVideo(videoPaths["SchillerstraßeVonBaumannstraße"])
         }
     });
 
         // Event Listener für den Button 'leftArrowBtn'
         leftArrowBtn.addEventListener('click', function () {
 
-            //Das ist noch falsch, eigentlich muss da WendenVonStart, Vergessen
             if (video.ended && currentVideo === videoPaths["Start"]) {
-                console.log("Changing video to WendenVonBahnhofstraße");
-                changeVideo(videoPaths["WendenVonBahnhofstraße"]);
+                console.log("Changing video to WendenVonStart");
+                changeVideo(videoPaths["WendenVonStart"]);
 
             } else if (video.ended && currentVideo === videoPaths["WendenVonBahnhofstraße"]) {
                 console.log("Changing video to BaumanstraßeVonWenden")
                 changeVideo(videoPaths["BaumanstraßeVonWenden"])
     
             } else if (video.ended && currentVideo === videoPaths["BaumanstraßeExtra1"]) {
+                console.log("Changing video to BaumanstraßeExtra2")
+                changeVideo(videoPaths["BaumanstraßeExtra2"])
+
+            } else if (video.ended && currentVideo === videoPaths["BaumanstraßeExtra1Schiller"]) {
                 console.log("Changing video to BaumanstraßeExtra2")
                 changeVideo(videoPaths["BaumanstraßeExtra2"])
                 
@@ -216,7 +236,16 @@ document.addEventListener('DOMContentLoaded', function () {
             } else if (video.ended && currentVideo === videoPaths["BaumanstraßeVonSchillerstraße"]) {
                 console.log("Changing video to BahnhofstraßeVonBaumanstraße")
                 changeVideo(videoPaths["BahnhofstraßeVonBaumanstraße"])
+
+            } else if (video.ended && currentVideo === videoPaths["WendenVonStart"]) {
+                console.log("Changing video to BaumanstraßeVonWenden")
+                changeVideo(videoPaths["BaumanstraßeVonWenden"])
+
+            } else if (video.ended && currentVideo === videoPaths["WendenVonBaumanstraße"]) {
+                console.log("Changing video to BaumanstraßeVonWenden")
+                changeVideo(videoPaths["BaumanstraßeVonWenden"])
             }
+
         });
 
         /*video.addEventListener('ended', function () {
