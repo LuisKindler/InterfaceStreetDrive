@@ -17,35 +17,65 @@ video {
     height: auto;
     object-fit: cover;
     position: absolute;
-    top: 0;
+    top: 43px;
     left: 0;
 }
 
 .start-button-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    bottom: 50%;
+    top: 62%;
+    left: 59%;
     transform: translate(-50%, -50%);
     z-index: 3; /* Erhöhe den Z-Index, wenn nötig */
 }
 
 .start-button {
-    padding: 0;
+    background: none;
     border: none;
     cursor: pointer;
     transition: background 0.3s ease;
+    padding: 0;
+    display: inline-block; /* Damit das Element nur so breit ist wie das Bild */
 }
 
 .start-button img {
-    width: 250px; /* Ändere die Breite nach Bedarf */
+    width: 50%; /* Fülle die Breite des Elternelements aus */
     height: auto; /* Behält das Seitenverhältnis des Bildes bei */
-    background: transparent;
+    outline: none;
+    border: none;
+    display: block; /* Entfernt die unsichtbare Lücke unter dem Bild */
 }
 
 .start-button:hover {
-    background: rgb(144, 144, 144);
+    transform: scale(1.1); /* Skaliert das Element um 110% beim Hover */
+    
 }
+
+/*RESTART*/
+.navigation-bar-restart {
+    position: absolute;
+    top: 59px;
+    margin-left: 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Buttons am unteren Rand ausrichten */
+    width: 80%;
+    max-width: 50px;
+    z-index: 1;
+}
+
+
+.navigation-bar-restart .button {
+    background: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
 
 
 /*Navgation Bar Unten (Roter, Gelber, Grüner Pfeil) */
@@ -79,7 +109,7 @@ video {
 .navigation-bar-upper {
     margin-bottom: 100px;
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     margin-left: 47%;
     align-items:center;
     width: 80%;
@@ -104,32 +134,37 @@ video {
     height: 24px; /* Passe die Höhe nach Bedarf an */
 }
 
+#stopBtn {
+    align-self: flex-end; /* Unten ausrichten */
+    margin: 10px 10px;
+    color: #ffe600;
+}
 
 
 /*Button Design Einzeln*/
 #leftArrowBtn {
     align-self: flex-end; /* Unten ausrichten */
     margin-right: 10px;
+    margin-bottom: 10px;
     color: #ff0202;
 }
 
-#stopBtn {
-    align-self: flex-end; /* Unten ausrichten */
-    margin: 0 10px;
-    color: #ffe600;
-}
 
 #upArrowBtn {
     align-self: flex-end; /* Unten ausrichten */
     margin-left: 10px;
+    margin-bottom: 10px;
     color: #0000ff;
 }
 
 #rightArrowBtn {
     align-self: flex-end; /* Unten ausrichten */
     margin-left: 10px;
+    margin-bottom: 10px;
     color: #008a05;
 }
+
+
 
 .navigation-bar-bottom .button:hover {
     background: rgb(144, 144, 144);

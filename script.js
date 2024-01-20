@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
             video.play();
             isPaused = false;
             // Aktualisiere das Symbol des Stop-Buttons auf "Pause"
-            document.getElementById("stopBtn").innerHTML = '<img src="Bilder/pause-alt-svgrepo-com.svg" alt="Pause">';
+            document.getElementById("stopBtn").innerHTML = "◼";
         }
     }
 
@@ -91,6 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
     stopBtn.classList.add("hidden");
     leftArrowBtn.classList.add("hidden");
     rightArrowBtn.classList.add("hidden");
+    restartBtn.classList.add("hidden");
 
      // Event Listener für den Button 'Start'
     startButton.addEventListener('click', function () {
@@ -103,6 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
         stopBtn.classList.remove("hidden");
         leftArrowBtn.classList.remove("hidden");
         rightArrowBtn.classList.remove("hidden");
+        restartBtn.classList.remove("hidden");
     });
 
     stopBtn.addEventListener('click', function () {
@@ -247,13 +249,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
         });
+        
+        restartBtn.addEventListener('click', function () {
+            console.log("Restart button clicked");
+        
+            // Setze das Video auf den Anfang des aktuellen Videos zurück
+            video.currentTime = 0;
+        
+            // Ändere das Video zum aktuellen Video (Start)
+            changeVideo(videoPaths["Start"]);
+        });
+        
+        
 
-        /*video.addEventListener('ended', function () {
-            console.log("Video ended");
-            video.pause();
-            video.currentTime = video.duration;
-            // Weitere Logik oder Aktionen hier
-        });*/
         
         
 });
