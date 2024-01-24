@@ -169,7 +169,6 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log("Changing video to BaumanstraßeVonBahnhofstraße")
             changeVideo(videoPaths["BaumanstraßeVonBahnhofstraße"])
 
-            //Das ist noch falsch, eigentlich muss da WendenVonBaumanstraße, Vergessen
         } else if (video.ended && currentVideo === videoPaths["BaumanstraßeVonSchillerstraße"]) {
             console.log("Changing video to WendenVonBaumanstraße")
             changeVideo(videoPaths["WendenVonBaumanstraße"])
